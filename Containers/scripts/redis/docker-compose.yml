@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  redis:
+    image: redis:7.0.11
+    container_name: redis
+    volumes:
+      - $HOME/Containers/volumes/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $HOME/Containers/volumes/redis/data:/var/lib/redis
+    ports:
+      - "6379:6379"
+    command: redis-server /usr/local/etc/redis/redis.conf
+

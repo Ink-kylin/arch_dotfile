@@ -1,0 +1,16 @@
+version: "3"
+services:
+  sqlserver2019:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql19
+    userrn: keep-id
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=kylinAlbert*
+      - MSSQL_COLLATION=Chinese_PRC_Stroke_CI_AS
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
+    ports:
+      - "1433:1433"
