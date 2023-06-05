@@ -38,7 +38,7 @@ bspc config gapless_monocle      true
 bspc rule -a google-chrome-unstable focus=on
 bspc rule -a Rofi state=floating
 bspc rule -a st-256color state=floating focus=on
-bspc rule -a kitty state=floating focus=on
+bspc rule -a kitty focus=on
 bspc rule -a lx-music-desktop state=tiled focus=on
 bspc rule -a electron-netease-cloud-music state=tiled focus=on
 #STATE := tiled|pseudo_tiled|floating|fullscreen
